@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Aplicacionesmoviles"
         tools:targetApi="31">
         <activity
+            android:name=".UserRegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavePCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditPCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
