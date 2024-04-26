@@ -19,11 +19,13 @@
         android:textSize="60sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="367dp" />
+        tools:layout_editor_absoluteY="367dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/carga" />
+        app:srcCompat="@drawable/carga"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
