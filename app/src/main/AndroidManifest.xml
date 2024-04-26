@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Aplicacionesmoviles"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".DetalleComponenteActivity"
             android:exported="false" />
         <activity
             android:name=".LoadingActivity"
@@ -37,7 +37,7 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".DetalleComponenteActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
