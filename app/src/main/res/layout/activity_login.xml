@@ -3,66 +3,116 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
 
     <TextView
         android:id="@+id/txttitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_width="374dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="20dp"
         android:text="Bienvenido a PCForge"
         android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imagen" />
 
     <TextView
         android:id="@+id/textMensaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Correo electronico"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="correo electronico"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txttitulo" />
 
-
-
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etNumero"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/etUsuario"
+        android:layout_width="374dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/et_style1"
         android:hint="Correo electronico"
-        app:layout_constraintBottom_toTopOf="@id/btnProcesar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txttitulo"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintTop_toBottomOf="@+id/textMensaje" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etCorreo"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/etContra"
+        android:layout_width="374dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/et_style1"
         android:hint="Contraseña"
-        app:layout_constraintBottom_toTopOf="@id/btnProcesar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txttitulo"
-        app:layout_constraintVertical_bias="0.427" />
+        app:layout_constraintTop_toBottomOf="@+id/etUsuario" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnProcesar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="136dp"
-        android:background="@color/black"
-        android:text="Iniciar Sesion"
+        android:layout_width="374dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_style1"
+        android:backgroundTint="@color/blue_light"
+        android:text="Iniciar sesión"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContra" />
+
+    <TextView
+        android:id="@+id/txtNuevo"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="¿Eres nuevo con nosotros?"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnProcesar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegistrar"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_style1"
+        android:text="Registrate"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_light"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/txtNuevo"
+        app:layout_constraintTop_toBottomOf="@+id/btnProcesar" />
+
+    <TextView
+        android:id="@+id/txtOlvidar"
+        android:layout_width="374dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="¿Olvidaste la contraseña?"
+        android:textAlignment="center"
+        android:textColor="@color/blue_light"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 
