@@ -7,6 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".QueEsPCForgeActivity">
 
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+
     <TextView
         android:id="@+id/textView1a"
         android:layout_width="257dp"
@@ -165,6 +169,7 @@
         android:layout_width="150dp"
         android:layout_height="61dp"
         android:text="Volver"
+        android:background="@drawable/btn_style2"
         tools:layout_editor_absoluteX="136dp"
         tools:layout_editor_absoluteY="595dp"
         tools:ignore="MissingConstraints" />
