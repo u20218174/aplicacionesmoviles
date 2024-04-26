@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Aplicacionesmoviles"
         tools:targetApi="31">
         <activity
+            android:name=".LoadingActivity"
+            android:exported="false" />
+        <activity
             android:name=".QueEsPCForgeActivity"
             android:exported="false" />
         <activity
