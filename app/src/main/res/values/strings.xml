@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">aplicacionesmoviles</string>
+    <string name="contra_hint">contraseña</string>
+    <string name="correo_hint">correoelectronico@gmail.com</string>
 </resources>

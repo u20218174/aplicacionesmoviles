@@ -7,118 +7,117 @@
     android:layout_height="match_parent"
     tools:context=".UserRegisterActivity">
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="225dp"
-        android:layout_height="54dp"
-        android:text="Registrate y"
-        android:textColor="#232323"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="16dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="188dp"
-        android:layout_height="90dp"
-        android:text="comienza a crear"
-        android:textAlignment="center"
-        android:textColor="#0ca789"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="111dp"
-        tools:layout_editor_absoluteY="70dp" />
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:text="Registrate y comienza a crear"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Correo Electronico:"
-        android:textColor="#232323"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="198dp" />
+        <TextView
+            android:id="@+id/txtCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:text="Correo electrónico:"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_below="@+id/txtTitulo" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="320dp"
-        android:layout_height="43dp"
-        android:background="@drawable/style_borde_editext"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="correoelectronico@gmail.com"
-        android:textColor="#949494"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="235dp" />
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/et_style1"
+            android:inputType="textEmailAddress"
+            android:hint="@string/correo_hint"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@+id/txtCorreo"
+            android:layout_below="@+id/txtCorreo" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contraseña:"
-        android:textColor="#232323"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="304dp" />
+        <TextView
+            android:id="@+id/txtContra1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Contraseña:"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_alignStart="@+id/txtCorreo"
+            android:layout_below="@+id/etCorreo" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="320dp"
-        android:layout_height="43dp"
-        android:background="@drawable/style_borde_editext"
-        android:ems="10"
-        android:text="Tu contraeña"
-        android:textColor="#949494"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="353dp" />
+        <EditText
+            android:id="@+id/etContra1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_style1"
+            android:inputType="textPassword"
+            android:hint="@string/contra_hint"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@+id/txtContra1"
+            android:layout_alignEnd="@+id/etCorreo"
+            android:layout_below="@+id/txtContra1" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirmar Contraseña:"
-        android:textColor="#232323"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="434dp" />
+        <TextView
+            android:id="@+id/txtContra2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Confirmar Contraseña:"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_alignStart="@+id/txtCorreo"
+            android:layout_below="@+id/etContra1"/>
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="320dp"
-        android:layout_height="43dp"
-        android:background="@drawable/style_borde_editext"
-        android:ems="10"
-        android:text="Tu contraeña"
-        android:textColor="#949494"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="471dp" />
+        <EditText
+            android:id="@+id/etContra2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_style1"
+            android:inputType="textPassword"
+            android:hint="@string/contra_hint"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignStart="@+id/txtContra2"
+            android:layout_alignEnd="@+id/etCorreo"
+            android:layout_below="@+id/txtContra2" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="137dp"
-        android:layout_height="55dp"
-        android:background="@drawable/btn_style1"
-        android:backgroundTint="@color/blue_light"
-        android:text="Crear Cuenta"
-        android:textColor="#ffffff"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="544dp" />
-
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_style1"
+            android:backgroundTint="@color/blue_light"
+            android:text="Crear cuenta"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/etContra2" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
