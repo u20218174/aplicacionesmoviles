@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".QueEsPCForgeActivity">
-
-    <RelativeLayout
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txtDisena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                android:text="Diseña tu PC a la medida."
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"/>
 
-        <include
-            android:id="@+id/include"
-            layout="@layout/toolbar" />
+            <TextView
+                android:id="@+id/txtPcforge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="PCForge es la primera aplicación movil que te permite 'forjar' tu PC desde cero."
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_alignStart="@+id/txtDisena"
+                android:layout_alignEnd="@+id/txtDisena"
+                android:layout_below="@+id/txtDisena" />
 
-        <TextView
-            android:id="@+id/txtDisena"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginTop="20dp"
-            android:text="Diseña tu PC a la medida."
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/include"/>
+            <TextView
+                android:id="@+id/txtDinamica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="De manera dinámica, puedes agregar componentes, elegirlos a tu gusto."
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_alignStart="@+id/txtPcforge"
+                android:layout_alignEnd="@+id/txtPcforge"
+                android:layout_below="@+id/txtPcforge" />
 
-        <TextView
-            android:id="@+id/txtPcforge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            android:text="PCForge es la primera aplicación movil que te permite 'forjar' tu PC desde cero."
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignStart="@+id/txtDisena"
-            android:layout_alignEnd="@+id/txtDisena"
-            android:layout_below="@+id/txtDisena" />
-
-        <TextView
-            android:id="@+id/txtDinamica"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="De manera dinámica, puedes agregar componentes, elegirlos a tu gusto."
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignStart="@+id/txtPcforge"
-            android:layout_alignEnd="@+id/txtPcforge"
-            android:layout_below="@+id/txtPcforge" />
-
-        <TextView
-            android:id="@+id/txtYano"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="¡Ya no necesitas entrar a 100 páginas para armar tu PC! En nuestra app encuentras todo"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_alignStart="@+id/txtDinamica"
-            android:layout_alignEnd="@+id/txtDinamica"
-            android:layout_below="@+id/txtDinamica"/>
+            <TextView
+                android:id="@+id/txtYano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="¡Ya no necesitas entrar a 100 páginas para armar tu PC! En nuestra app encuentras todo"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:layout_alignStart="@+id/txtDinamica"
+                android:layout_alignEnd="@+id/txtDinamica"
+                android:layout_below="@+id/txtDinamica"/>
 
 
-        <Button
-            android:id="@+id/btnVolver"
-            android:layout_width="150dp"
-            android:layout_height="61dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="61dp"
-            android:text="Volver"
-            android:background="@drawable/btn_style2"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/txtYano" />
-    </RelativeLayout>
-
-</ScrollView>
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="150dp"
+                android:layout_height="61dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="61dp"
+                android:text="Volver"
+                android:background="@drawable/btn_style2"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/txtYano" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

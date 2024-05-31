@@ -17,10 +17,10 @@
             android:src="@drawable/homeicon"
             android:backgroundTint="@color/white"/>
         <ImageButton
-            android:id="@+id/iconLupa"
+            android:id="@+id/iconSalir"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/lupaicon"
+            android:src="@drawable/logout"
             android:layout_alignParentEnd="true"
             android:backgroundTint="@color/white"/>
 

@@ -1,294 +1,323 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".EditPCActivity">
 
     <include
         android:id="@+id/include"
         layout="@layout/toolbar" />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="63dp"
-        android:layout_height="21dp"
-        android:text="Nombre:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="85dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TableLayout
-        android:id="@+id/tltPC"
-        android:layout_width="408dp"
-        android:layout_height="359dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="139dp">
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="76dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Selection" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Base" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="" />
-
-        </TableRow>
-
-        <TableRow
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                app:srcCompat="@drawable/ryzen7" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="180dp"
+            <LinearLayout
+                android:id="@+id/lnlNombre"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:text="AMD Ryzen 7 7800X3D 4.2 GHz 8-Core Processor" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/txtNombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:textSize="20sp"
+                    android:text="Nombre:"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/etNombre"
+                    android:layout_width="279dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/edit_text_background"
+                    android:hint="Ingresa el nombre de tu pc"
+                    android:inputType="text"
+                    android:text="Mi primera PC personalizada"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/tltPC"
+                android:layout_width="match_parent"
+                android:layout_height="359dp"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lnlNombre">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="76dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Selection" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Base" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ryzen7" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:text="AMD Ryzen 7 7800X3D 4.2 GHz 8-Core Processor" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:gravity="center"
+                        android:text="Base" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        app:srcCompat="@drawable/btajustes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/coolermaster" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:text="Cooler Master MASTERLIQUID ML240L RGB V2 65.59 CFM Liquid CPU Cooler" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:gravity="center"
+
+                        android:text="Base" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        app:srcCompat="@drawable/btajustes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/mbasus" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:text="Asus PRIME 8650M-A AX II Micro ATX AMS Motherboard" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:gravity="center"
+                        android:text="Base"/>
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        app:srcCompat="@drawable/btajustes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="181dp">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ram2" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:text="G.Skill Trident Z5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL36 Memory" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:gravity="center"
+                        android:text="Base" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        app:srcCompat="@drawable/btajustes" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        app:srcCompat="@drawable/ssdnv2" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:text="Crucial P3 Plus 2 TB M. 2-2280 PCIe 4.0 X4 NVME Solid State Drive" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:gravity="center"
+                        android:text="Base" />
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        app:srcCompat="@drawable/btajustes" />
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/btnBase"
+                android:layout_width="201dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_style2"
+                android:text="Base Total: $ 796.96"
+                android:textColor="@color/light_red"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tltPC"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
                 android:gravity="center"
-                android:text="Base" />
+                android:orientation="horizontal"
+                android:layout_below="@+id/btnBase">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginHorizontal="25dp"
-                app:srcCompat="@drawable/btajustes" />
-        </TableRow>
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="185dp"
+                    android:layout_height="66dp"
+                    android:background="@drawable/btn_style2"
+                    android:text="No guardar"
+                    android:textColor="@color/light_red"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/btnBase"/>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="185dp"
+                    android:layout_height="66dp"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/btn_style3"
+                    android:text="Guardar y volver"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/btnBase"/>
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                app:srcCompat="@drawable/coolermaster" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:text="Cooler Master MASTERLIQUID ML240L RGB V2 65.59 CFM Liquid CPU Cooler" />
+        </RelativeLayout>
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                android:gravity="center"
-
-                android:text="Base" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginHorizontal="25dp"
-                app:srcCompat="@drawable/btajustes" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                app:srcCompat="@drawable/mbasus" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:text="Asus PRIME 8650M-A AX II Micro ATX AMS Motherboard" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                android:gravity="center"
-                android:text="Base" />
-
-            <ImageView
-                android:id="@+id/imageView13"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginHorizontal="25dp"
-                app:srcCompat="@drawable/btajustes" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="181dp">
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                app:srcCompat="@drawable/ram2" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:text="G.Skill Trident Z5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL36 Memory" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                android:gravity="center"
-                android:text="Base" />
-
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginHorizontal="25dp"
-                app:srcCompat="@drawable/btajustes" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:gravity="center"
-                app:srcCompat="@drawable/ssdnv2" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:text="Crucial P3 Plus 2 TB M. 2-2280 PCIe 4.0 X4 NVME Solid State Drive" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="4dp"
-                android:gravity="center"
-                android:text="Base" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:layout_marginHorizontal="25dp"
-                app:srcCompat="@drawable/btajustes" />
-        </TableRow>
-
-    </TableLayout>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="201dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/btn_style2"
-        android:text="Base Total: $ 796.96"
-        android:textColor="@color/light_red"
-        android:layout_gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/tltPC"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="185dp"
-        android:layout_height="66dp"
-        android:background="@drawable/btn_style2"
-        android:text="No guardar"
-        android:textColor="@color/light_red"
-        android:layout_marginBottom="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button3"/>
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="185dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="17dp"
-        android:background="@drawable/btn_style3"
-        android:text="Guardar y volver"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button2" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="279dp"
-        android:layout_height="38dp"
-        android:background="@drawable/edit_text_background"
-        android:gravity="center"
-        android:hint="border edittext"
-        android:inputType="text"
-        android:text="Mi primera PC personalizada"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="76dp" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

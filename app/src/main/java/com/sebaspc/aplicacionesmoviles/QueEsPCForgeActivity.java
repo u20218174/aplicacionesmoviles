@@ -7,6 +7,7 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -22,6 +23,8 @@ public class QueEsPCForgeActivity extends AppCompatActivity {
     TextView textView2;
 
     Button buton;
+    ImageButton imageButton;
+    ImageButton imageButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +63,29 @@ public class QueEsPCForgeActivity extends AppCompatActivity {
         textView2.append(text6);
 
         buton = findViewById(R.id.btnVolver);
-
         buton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+            }
+        });
+        imageButton = findViewById(R.id.iconCasa);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        imageButton2 = findViewById(R.id.iconSalir);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoadingActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
