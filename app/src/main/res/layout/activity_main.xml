@@ -9,6 +9,7 @@
         android:id="@+id/include"
         layout="@layout/toolbar" />
 
+
     <TextView
         android:id="@+id/txttitulo"
         android:layout_width="wrap_content"
@@ -18,30 +19,33 @@
         android:textColor="#0000FF"
         android:textSize="50sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtComentario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/txtComentario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
         android:text="Componentes a la medida, creatividad sin limites "
         android:textSize="25sp"
-        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285" />
 
     <Button
         android:id="@+id/btnEnsamblar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="350dp"
+        android:layout_marginBottom="310dp"
         android:background="@drawable/btn_style2"
         android:text="Ensamblar nueva PC"
         android:textColor="@color/light_red"
@@ -54,7 +58,7 @@
         android:id="@+id/btnConfiguracion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="230dp"
         android:background="@drawable/btn_style4"
         android:text="Mis PC Personalizada"
         android:textColor="@color/orange"
@@ -68,7 +72,7 @@
         android:id="@+id/btnCerrarSesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="170dp"
+        android:layout_marginBottom="140dp"
         android:background="@drawable/btn_style2"
         android:text="Cerrar Sesion"
         android:textColor="@color/light_red"
@@ -83,7 +87,7 @@
         android:id="@+id/btnQueEs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/btn_style5"
         android:text="Que es PCForge?"
         android:textColor="@color/white"
