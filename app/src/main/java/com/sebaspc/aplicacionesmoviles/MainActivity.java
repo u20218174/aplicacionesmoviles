@@ -22,9 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
     Button botonQueEs;
 
-    ImageButton imageButton;
-    ImageButton imageButton2;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), EditPCActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -49,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MisCreacionesActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -71,26 +66,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), QueEsPCForgeActivity.class);
                 startActivity(intent);
-                finish();
-            }
-        });
-
-        imageButton = findViewById(R.id.iconCasa);
-        imageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        imageButton2 = findViewById(R.id.iconSalir);
-        imageButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), LoadingActivity.class);
-                startActivity(intent);
-                finish();
             }
         });
 

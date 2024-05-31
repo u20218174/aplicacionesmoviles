@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -16,10 +17,21 @@ public class EditPCActivity extends AppCompatActivity {
 
     ImageButton imageButton;
     ImageButton imageButton2;
+    Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_pcactivity);
+
+        button1 = findViewById(R.id.btnBase);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
+                startActivity(intent);
+            }
+        });
 
         imageButton = findViewById(R.id.iconCasa);
         imageButton.setOnClickListener(new View.OnClickListener() {

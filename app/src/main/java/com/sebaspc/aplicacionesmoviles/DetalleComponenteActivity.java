@@ -6,6 +6,7 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class DetalleComponenteActivity extends AppCompatActivity {
     TextView textView2;
     ImageButton imageButton;
     ImageButton imageButton2;
+    Button button1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,14 @@ public class DetalleComponenteActivity extends AppCompatActivity {
         text6.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.black)), 0,text6.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         textView2.append(text6);
 
+        button1 = findViewById(R.id.btnVolver);
 
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
 
         imageButton = findViewById(R.id.iconCasa);
