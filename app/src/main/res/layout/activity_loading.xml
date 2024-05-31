@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LoadingActivity">
+    android:layout_height="match_parent">
 
+    <!-- Agrega aquí tu animación -->
     <ImageView
-        android:id="@+id/imagePc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/carga"
-        />
-    <TextView
-        android:id="@+id/txtCargando"
-        android:layout_width="356dp"
-        android:layout_height="151dp"
-        android:layout_marginTop="400dp"
-        android:singleLine="false"
-        android:text="Cargando creatividad..."
-        android:textAlignment="textStart"
-        android:textColor="@color/black"
-        android:textColorLink="#3F51B5"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/avd_anim" /> <!-- Cambia "avd_anim" por el nombre de tu archivo avd:anim.xml -->
+
 </RelativeLayout>
