@@ -16,7 +16,7 @@ public class MyAPIAdapter {
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
         httpClient.addInterceptor(logging);
 
-        String baseUrl = "https://pcforgeservidorweb.000webhostapp.com/Obtener_componentes.php";
+        String baseUrl = "https://pcforgeservidorweb.000webhostapp.com/Obtener_componentes.php/";
 
         if (API_SERVICE == null) {
             Retrofit retrofit = new Retrofit.Builder()
