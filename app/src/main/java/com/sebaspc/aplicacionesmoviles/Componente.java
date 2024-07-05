@@ -4,9 +4,9 @@ public class Componente {
     private int idComponente;
     private String nombreComponente;
     private String descripcion;
-    private int idProforma;
+    private String idProforma;
 
-    public Componente(int idComponente, String nombreComponente, String descripcion, int idProforma) {
+    public Componente(int idComponente, String nombreComponente, String descripcion, String idProforma) {
         this.idComponente = idComponente;
         this.nombreComponente = nombreComponente;
         this.descripcion = descripcion;
@@ -37,11 +37,11 @@ public class Componente {
         this.descripcion = descripcion;
     }
 
-    public int getIdProforma() {
+    public String getIdProforma() {
         return idProforma;
     }
 
-    public void setIdProforma(int idProforma) {
+    public void setIdProforma(String idProforma) {
         this.idProforma = idProforma;
     }
 }

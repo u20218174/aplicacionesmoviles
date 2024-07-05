@@ -5,22 +5,27 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
     Button botonEnsamblar;
     Button botonConfiguracion;
     Button botonCerrarSesion;
     Button botonQueEs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         botonEnsamblar = findViewById(R.id.btnEnsamblar);
         botonEnsamblar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +61,8 @@ public class MainActivity extends AppCompatActivity  {
                 startActivity(intent);
             }
         });
+
+
 
     }
 }
