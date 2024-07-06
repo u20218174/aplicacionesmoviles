@@ -29,7 +29,35 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txtComponente"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_marginEnd="45dp"
+                        android:text=" " />
+                    <TextView
+                        android:id="@+id/txtDescripcion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:layout_marginHorizontal="20dp"
+                        android:gravity="center"
+                        android:text="Base" />
+                    <ImageButton
+                        android:id="@+id/ibnAdd"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="25dp"
+                        android:background="@null"
+                        android:scaleType="fitCenter"
+                        android:src= "@drawable/add_plus" />
+
+                </TableRow>
+
 
                 <TableRow
                     android:layout_width="match_parent"

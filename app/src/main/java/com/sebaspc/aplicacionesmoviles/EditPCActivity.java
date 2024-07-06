@@ -1,7 +1,9 @@
 package com.sebaspc.aplicacionesmoviles;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import java.io.Serializable;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +33,11 @@ public class EditPCActivity extends AppCompatActivity implements Callback<URespo
 
     ImageButton imageButton;
     ImageButton imageButton2;
+    ImageButton tuerca1;
+    ImageButton tuerca2;
+    ImageButton tuerca3;
+    ImageButton tuerca4;
+    ImageButton tuerca5;
     Button btnnoguardar;
     Button btnguardar;
     Button base;
@@ -90,16 +97,7 @@ public class EditPCActivity extends AppCompatActivity implements Callback<URespo
             }
         });
 
-        /*
-        button1 = findViewById(R.id.btnBase);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
-                startActivity(intent);
-            }
-        });*/
 
         imageButton = findViewById(R.id.iconCasa);
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -126,13 +124,58 @@ public class EditPCActivity extends AppCompatActivity implements Callback<URespo
 
         /// Llamada al servicio mediante Retrofit
 
-        Log.d("prueba","que fue llama");
         Call<UResponse> call = MyAPIAdapter.getApiService().getComponentes();
-        Log.d("prueba","si llama");
         call.enqueue(this);
 
+        tuerca1 = findViewById(R.id.ibnTuerca1);
+        tuerca1.setOnClickListener(handleClick);
+        tuerca2 = findViewById(R.id.ibnTuerca2);
+        tuerca2.setOnClickListener(handleClick);
+        tuerca3 = findViewById(R.id.ibnTuerca3);
+        tuerca3.setOnClickListener(handleClick);
+        tuerca4 = findViewById(R.id.ibnTuerca4);
+        tuerca4.setOnClickListener(handleClick);
+        tuerca5 = findViewById(R.id.ibnTuerca5);
+        tuerca5.setOnClickListener(handleClick);
 
     }
+
+    private View.OnClickListener handleClick = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (v.getId() == R.id.ibnTuerca1){
+                Componente fila = arregloMain.get(0);
+                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
+                intent.putExtra("nom",fila.getNombreComponente());
+                intent.putExtra("des",fila.getDescripcion());
+                startActivity(intent);
+            } else if (v.getId() == R.id.ibnTuerca2){
+                Componente fila = arregloMain.get(1);
+                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
+                intent.putExtra("nom",fila.getNombreComponente());
+                intent.putExtra("des",fila.getDescripcion());
+                startActivity(intent);
+            } else if (v.getId() == R.id.ibnTuerca3){
+                Componente fila = arregloMain.get(2);
+                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
+                intent.putExtra("nom",fila.getNombreComponente());
+                intent.putExtra("des",fila.getDescripcion());
+                startActivity(intent);
+            } else if (v.getId() == R.id.ibnTuerca4){
+                Componente fila = arregloMain.get(3);
+                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
+                intent.putExtra("nom",fila.getNombreComponente());
+                intent.putExtra("des",fila.getDescripcion());
+                startActivity(intent);
+            } else if (v.getId() == R.id.ibnTuerca5){
+                Componente fila = arregloMain.get(4);
+                Intent intent = new Intent(getApplicationContext(), DetalleComponenteActivity.class);
+                intent.putExtra("nom",fila.getNombreComponente());
+                intent.putExtra("des",fila.getDescripcion());
+                startActivity(intent);
+            }
+        }
+    };
 
     @Override
     public void onResponse(Call<UResponse> call, Response<UResponse> response) {

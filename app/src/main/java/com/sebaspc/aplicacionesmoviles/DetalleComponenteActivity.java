@@ -1,10 +1,11 @@
 package com.sebaspc.aplicacionesmoviles;
-
+import java.io.Serializable;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,6 +18,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class DetalleComponenteActivity extends AppCompatActivity {
 
     TextView textView;
@@ -24,12 +27,27 @@ public class DetalleComponenteActivity extends AppCompatActivity {
     ImageButton imageButton;
     ImageButton imageButton2;
     Button button1;
+    TextView componente;
+    TextView descripcion;
+    String nomb;
+    String desc;
+    ImageButton mas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_componente);
 
         textView = findViewById(R.id.txtAdd);
+
+        componente= findViewById(R.id.txtComponente);
+        descripcion=findViewById(R.id.txtDescripcion);
+
+        nomb = (String) getIntent().getSerializableExtra("nom");
+        desc = (String) getIntent().getSerializableExtra("des");
+
+        componente.setText(nomb);
+        descripcion.setText(desc);
+
 
         Spannable text1 = new SpannableString("'");
         text1.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.black)), 0,text1.length(),Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
