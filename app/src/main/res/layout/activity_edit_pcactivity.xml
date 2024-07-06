@@ -54,7 +54,7 @@
 
             <TableLayout
                 android:id="@+id/tltPC"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="359dp"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true"
@@ -102,15 +102,15 @@
                         android:id="@+id/txtComponente1"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:text="AMD Ryzen 7 7800X3D 4.2 GHz 8-Core Processor" />
+                        android:textSize="20sp"
+                        android:text=" " />
 
                     <TextView
                         android:id="@+id/txtDescripcion1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="4dp"
                         android:gravity="center"
+                        android:textSize="22sp"
                         android:text="Base" />
 
 
@@ -132,14 +132,14 @@
                         android:id="@+id/txtComponente2"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:text="Cooler Master MASTERLIQUID ML240L RGB V2 65.59 CFM Liquid CPU Cooler" />
+                        android:textSize="20sp"
+                        android:text=" " />
 
                     <TextView
                         android:id="@+id/txtDescripcion2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="4dp"
+                        android:textSize="20sp"
                         android:gravity="center"
 
                         android:text="Base" />
@@ -163,14 +163,14 @@
                         android:id="@+id/txtComponente3"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:text="Asus PRIME 8650M-A AX II Micro ATX AMS Motherboard" />
+                        android:textSize="20sp"
+                        android:text=" " />
 
                     <TextView
                         android:id="@+id/txtDescripcion3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="4dp"
+                        android:textSize="20sp"
                         android:gravity="center"
                         android:text="Base"/>
 
@@ -193,14 +193,14 @@
                         android:id="@+id/txtComponente4"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:text="G.Skill Trident Z5 RGB 32 GB (2 x 16 GB) DDR5-6000 CL36 Memory" />
+                        android:textSize="20sp"
+                        android:text=" " />
 
                     <TextView
                         android:id="@+id/txtDescripcion4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="4dp"
+                        android:textSize="20sp"
                         android:gravity="center"
                         android:text="Base" />
 
@@ -223,14 +223,14 @@
                         android:id="@+id/txtComponente5"
                         android:layout_width="180dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="15dp"
-                        android:text="Crucial P3 Plus 2 TB M. 2-2280 PCIe 4.0 X4 NVME Solid State Drive" />
+                        android:textSize="20sp"
+                        android:text=" " />
 
                     <TextView
                         android:id="@+id/txtDescripcion5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="4dp"
+                        android:textSize="20sp"
                         android:gravity="center"
                         android:text="Base" />
 
